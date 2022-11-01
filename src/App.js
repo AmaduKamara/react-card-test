@@ -8,8 +8,8 @@ const App = () => {
   const [cardItems, setCardItems] = useState([]);
 
   // Handle add card
-  const handleAddCard = (count, max = 100) => {
-    const randomNumber = Math.floor(Math.random() * max) + 1;
+  const handleAddCard = () => {
+    const randomNumber = Math.floor(Math.random() * 150) + 1;
 
     setCardItems([
       ...cardItems,
@@ -39,7 +39,7 @@ const App = () => {
         <div className="absolute top-0 mt-20 mb-20 px-16 w-full grid grid-cols-1 md:grid-cols-4 gap-6 overflow-hidden overflow-y-auto max-h-[800px]">
           {cardItems.length === 0 && (
             <div>
-              <p>Sorry, there are no cards.</p>
+              <p>Sorry, there is no card.</p>
             </div>
           )}
           {cardItems &&
