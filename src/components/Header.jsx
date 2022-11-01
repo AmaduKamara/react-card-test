@@ -1,10 +1,14 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ handleAddCard, handleSort }) => {
   return (
     <header className="py-4 border-b-2 border-gray-400 absolute top-0 left-0 w-full px-16">
-      <button className="font-semibold">Add Card</button>
-      <button className="font-semibold ml-10">Sort Card</button>
+      <button onClick={handleAddCard} className="font-semibold">
+        Add Card
+      </button>
+      <button className="font-semibold ml-10" onClick={handleSort}>
+        Sort Card
+      </button>
     </header>
   );
 };
